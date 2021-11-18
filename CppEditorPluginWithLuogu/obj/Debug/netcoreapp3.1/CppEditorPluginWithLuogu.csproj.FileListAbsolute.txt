@@ -1,0 +1,15 @@
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.deps.json
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.runtimeconfig.json
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.runtimeconfig.dev.json
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.dll
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.pdb
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Debug\netcoreapp3.1\ICSharpCode.AvalonEdit.dll
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.AssemblyReference.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.AssemblyInfoInputs.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.AssemblyInfo.cs
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.CoreCompileInputs.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.CopyComplete
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.dll
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.pdb
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Debug\netcoreapp3.1\CppEditorPluginWithLuogu.genruntimeconfig.cache

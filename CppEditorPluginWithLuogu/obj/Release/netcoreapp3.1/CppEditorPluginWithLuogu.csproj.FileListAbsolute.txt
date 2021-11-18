@@ -1,0 +1,13 @@
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Release\netcoreapp3.1\CppEditorPluginWithLuogu.deps.json
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Release\netcoreapp3.1\CppEditorPluginWithLuogu.runtimeconfig.json
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Release\netcoreapp3.1\CppEditorPluginWithLuogu.runtimeconfig.dev.json
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Release\netcoreapp3.1\CppEditorPluginWithLuogu.dll
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.AssemblyReference.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.AssemblyInfoInputs.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.AssemblyInfo.cs
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.CoreCompileInputs.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.dll
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.genruntimeconfig.cache
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.CopyComplete

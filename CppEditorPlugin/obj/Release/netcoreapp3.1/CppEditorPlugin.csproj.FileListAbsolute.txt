@@ -1,0 +1,13 @@
+D:\Work\Program\EditorPlugin\CppEditorPlugin\bin\Release\netcoreapp3.1\CppEditorPlugin.deps.json
+D:\Work\Program\EditorPlugin\CppEditorPlugin\bin\Release\netcoreapp3.1\CppEditorPlugin.dll
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.AssemblyInfoInputs.cache
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.AssemblyInfo.cs
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.csproj.CoreCompileInputs.cache
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.dll
+D:\Work\Program\EditorPlugin\CppEditorPlugin\bin\Release\netcoreapp3.1\CppEditorPlugin.runtimeconfig.json
+D:\Work\Program\EditorPlugin\CppEditorPlugin\bin\Release\netcoreapp3.1\CppEditorPlugin.runtimeconfig.dev.json
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.genruntimeconfig.cache
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.csproj.AssemblyReference.cache
+D:\Work\Program\EditorPlugin\CppEditorPlugin\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Work\Program\EditorPlugin\CppEditorPlugin\obj\Release\netcoreapp3.1\CppEditorPlugin.csproj.CopyComplete

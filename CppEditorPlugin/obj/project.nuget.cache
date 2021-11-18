@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KbuYv97l2rV2YZYOyUCwxa8ZeL1uI4QQM8+Kd4ZPTBiwijNaNpbeeuRCcypkiq2kUctyQUnWJpxNWRIvEbcWOg==",
+  "success": true,
+  "projectFilePath": "D:\\Work\\Program\\EditorPlugin\\CppEditorPlugin\\CppEditorPlugin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Return\\.nuget\\packages\\avalonedit\\6.1.2.30\\avalonedit.6.1.2.30.nupkg.sha512",
+    "C:\\Users\\Return\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

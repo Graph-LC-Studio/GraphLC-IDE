@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CppEditorPluginWithLuogu/1.0.0.0": {
+        "dependencies": {
+          "AvalonEdit": "6.1.2.30"
+        },
+        "runtime": {
+          "CppEditorPluginWithLuogu.dll": {}
+        }
+      },
+      "AvalonEdit/6.1.2.30": {
+        "runtime": {
+          "lib/netcoreapp3.1/ICSharpCode.AvalonEdit.dll": {
+            "assemblyVersion": "6.1.2.30",
+            "fileVersion": "6.1.2.30"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CppEditorPluginWithLuogu/1.0.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AvalonEdit/6.1.2.30": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u6nLnEt9SAj20LvxCj1GvGisABnpy3wj1WUm5qnM4QVNPLMpfp1hPQ9JJmaYSFiLIDvcHPU79ZkV8VXlHrNkUA==",
+      "path": "avalonedit/6.1.2.30",
+      "hashPath": "avalonedit.6.1.2.30.nupkg.sha512"
+    }
+  }
+}

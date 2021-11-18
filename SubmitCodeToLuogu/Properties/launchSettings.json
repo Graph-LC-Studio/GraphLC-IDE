@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SubmitCodeToLuogu": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\Work\\Program\\EditorPlugin\\SubmitCodeToLuogu\\bin\\Release\\netcoreapp3.1\\Cache\\2021_11_15_23_37_09_536.cpp"
+    }
+  }
+}

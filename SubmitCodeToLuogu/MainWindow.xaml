@@ -1,0 +1,41 @@
+﻿<mah:MetroWindow x:Class="SubmitCodeToLuogu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SubmitCodeToLuogu"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="提交代码至 Luogu" Height="140" Width="400" Closing="MetroWindow_Closing" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" TitleCharacterCasing="Normal">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="TextBoxProblem" VerticalAlignment="Center" mah:TextBoxHelper.Watermark="题号"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox x:Name="CheckBoxO2" Content="开启O2"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <ComboBox x:Name="ComboBoxLanguage" Width="100" Margin="8,0" SelectedIndex="0">
+                    <ComboBoxItem Tag="3">C++98</ComboBoxItem>
+                    <ComboBoxItem Tag="4">C++11</ComboBoxItem>
+                    <ComboBoxItem Tag="11">C++14</ComboBoxItem>
+                    <ComboBoxItem Tag="12">C++17</ComboBoxItem>
+                </ComboBox>
+                <Button Content="提交" Click="Submit" IsDefault="True" Width="60" BorderThickness="1" Style="{StaticResource MahApps.Styles.Button.Square}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</mah:MetroWindow>

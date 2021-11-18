@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "50+NCJ5DWm75Mj9Zm/qcS9vroPLkAKxp48xCfrxbnQGaKd9Ki820OvMOfPfipWOnMV4sQGHH+LjnqlpwEoLVqQ==",
+  "success": true,
+  "projectFilePath": "D:\\Work\\Program\\EditorPlugin\\CppEditorPluginWithLuogu\\CppEditorPluginWithLuogu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Return\\.nuget\\packages\\avalonedit\\6.1.2.30\\avalonedit.6.1.2.30.nupkg.sha512",
+    "C:\\Users\\Return\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -8,17 +8,17 @@
     ".NETCoreApp,Version=v3.1": {
       "GlcEditorPlugin/1.0.0": {
         "dependencies": {
-          "AvalonEdit": "6.1.2.30"
+          "GraphLC IDE.CodeEditor": "1.0.0.0"
         },
         "runtime": {
           "GlcEditorPlugin.dll": {}
         }
       },
-      "AvalonEdit/6.1.2.30": {
+      "GraphLC IDE.CodeEditor/1.0.0.0": {
         "runtime": {
-          "lib/netcoreapp3.1/ICSharpCode.AvalonEdit.dll": {
-            "assemblyVersion": "6.1.2.30",
-            "fileVersion": "6.1.2.30"
+          "GraphLC IDE.CodeEditor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -30,12 +30,10 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AvalonEdit/6.1.2.30": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-u6nLnEt9SAj20LvxCj1GvGisABnpy3wj1WUm5qnM4QVNPLMpfp1hPQ9JJmaYSFiLIDvcHPU79ZkV8VXlHrNkUA==",
-      "path": "avalonedit/6.1.2.30",
-      "hashPath": "avalonedit.6.1.2.30.nupkg.sha512"
+    "GraphLC IDE.CodeEditor/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

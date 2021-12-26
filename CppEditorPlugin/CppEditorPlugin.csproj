@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+	<UseWPF>true</UseWPF>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <Authors>Return</Authors>
@@ -16,16 +17,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AvalonEdit" Version="6.1.2.30">
-      <ExcludeAssets>runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	  <PackageReference Include="AvalonEdit" Version="6.1.2.30" >
+		  <ExcludeAssets>runtime</ExcludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" >
+		  <ExcludeAssets>runtime</ExcludeAssets>
+	  </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="GlcEditorPlugin">
       <HintPath>Import\GlcEditorPlugin.dll</HintPath>
       <Private>false</Private>
+    </Reference>
+    <Reference Include="GraphLC IDE.CodeEditor">
+      <HintPath>Import\GraphLC IDE.CodeEditor.dll</HintPath>
+	  <Private>false</Private>
     </Reference>
   </ItemGroup>
 

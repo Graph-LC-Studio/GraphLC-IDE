@@ -9,5 +9,3 @@ D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\
 D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.CoreCompileInputs.cache
 D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.dll
 D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.genruntimeconfig.cache
-D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
-D:\Work\Program\EditorPlugin\CppEditorPluginWithLuogu\obj\Release\netcoreapp3.1\CppEditorPluginWithLuogu.csproj.CopyComplete

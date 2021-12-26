@@ -20,7 +20,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/_._": {}
         }
       }
     }
@@ -130,6 +130,7 @@
             "version": "[6.1.2.30, )"
           },
           "Newtonsoft.Json": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[13.0.1, )"
           }
@@ -147,9 +148,12 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,26 @@
+﻿<mah:MetroWindow x:Class="GraphLC_IDE.Windows.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraphLC_IDE.Windows"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="关于 GraphLC IDE 2021" Height="450" Width="800" WindowStartupLocation="CenterOwner" TitleCharacterCasing="Normal">
+    <Grid Margin="8,6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Image Source="/GraphLC IDE;component/Images/icon_x256.2022.png" Height="64" Margin="8,0"/>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="TextBlockName" FontSize="28" FontWeight="ExtraBold"/>
+                <TextBlock x:Name="TextBlockVersion" FontSize="14" FontWeight="Light" TextAlignment="Right"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <TextBlock x:Name="TextBlockCopyright" Grid.Row="1" Text="©2019-2022 Graph LC Studio"/>
+    </Grid>
+</mah:MetroWindow>

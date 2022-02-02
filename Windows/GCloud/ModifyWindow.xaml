@@ -1,0 +1,21 @@
+﻿<mah:MetroWindow x:Class="GraphLC_IDE.Windows.GCloud.ModifyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:GraphLC_IDE.Windows"
+        mc:Ignorable="d"
+        Title="修改 GCloud 账户密码" Height="536" Width="440" ResizeMode="CanMinimize" WindowStartupLocation="CenterOwner" TitleCharacterCasing="Normal">
+    <Canvas>
+        <TextBox x:Name="Username" mah:TextBoxHelper.Watermark="用户名" Width="232" Canvas.Left="104" Canvas.Top="180"/>
+        <PasswordBox x:Name="PassWord" mah:TextBoxHelper.Watermark="新密码" Width="232" Canvas.Left="104" Canvas.Top="210"/>
+        <PasswordBox x:Name="VerifyPassWord" mah:TextBoxHelper.Watermark="确认密码" Width="232" Canvas.Left="104" Canvas.Top="240"/>
+        <TextBox x:Name="Email" mah:TextBoxHelper.Watermark="邮箱" Width="181" Canvas.Left="104" Canvas.Top="272"/>
+        <Button Content="验证" Click="Verify" Width="46" Style="{StaticResource MahApps.Styles.Button.Square}" Canvas.Left="290" Canvas.Top="272" Height="26" BorderThickness="1"/>
+        <TextBox x:Name="Code" mah:TextBoxHelper.Watermark="收到的验证码" Width="232" Canvas.Left="104" Canvas.Top="302"/>
+
+        <mah:ProgressRing x:Name="Ring" Visibility="Collapsed" Width="24" Height="24" Canvas.Top="467" Canvas.Left="315"/>
+        <Button Content="修改" Click="ModifyPassword" IsDefault="True" Width="64" Style="{StaticResource MahApps.Styles.Button.Square}" Canvas.Left="366" Canvas.Top="468"/>
+    </Canvas>
+</mah:MetroWindow>

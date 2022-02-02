@@ -1,0 +1,83 @@
+﻿<mah:MetroWindow x:Class="GraphLC_IDE.Windows.SearchBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraphLC_IDE.Windows"
+        xmlns:localfun="clr-namespace:GraphLC_IDE.Functions"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="查找和替换" Height="280" Width="465" WindowStartupLocation="CenterOwner" Closing="SearchBarClothing">
+    
+    <Window.Resources>
+        <RoutedUICommand x:Key="RoutedSearch"/>
+        <RoutedUICommand x:Key="RoutedReplace"/>
+    </Window.Resources>
+
+    <Window.InputBindings>
+        <KeyBinding Gesture="Alt+F" Command="{StaticResource RoutedSearch}"/>
+        <KeyBinding Gesture="Alt+R" Command="{StaticResource RoutedReplace}"/>
+    </Window.InputBindings>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource RoutedSearch}"
+                        Executed="CommandBinding_Search"/>
+        <CommandBinding Command="{StaticResource RoutedReplace}"
+                        Executed="CommandBinding_Replace"/>
+    </Window.CommandBindings>
+    
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="18"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="8,0" VerticalAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="SearchText" mah:TextBoxHelper.Watermark="查找的文本" KeyUp="SearchText_KeyUp"/>
+                <mah:DropDownButton Grid.Column="2" Content="查找 (Alt+F)">
+                    <mah:DropDownButton.Items>
+                        <MenuItem Header="查找上一个" Click="SearchPrevious"/>
+                        <MenuItem Header="查找下一个" Click="SearchNext"/>
+                    </mah:DropDownButton.Items>
+                </mah:DropDownButton>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="ReplaceText" mah:TextBoxHelper.Watermark="替换的文本"/>
+                <mah:DropDownButton Grid.Column="2" Content="替换 (Alt+R)">
+                    <mah:DropDownButton.Items>
+                        <MenuItem Header="替换" Click="Replace"/>
+                        <MenuItem Header="替换全部" Click="ReplaceAll"/>
+                    </mah:DropDownButton.Items>
+                </mah:DropDownButton>
+            </Grid>
+
+            <StackPanel.Style>
+                <Style>
+                    <Setter Property="localfun:LayoutHelper.Margin" Value="0,0,0,10"/>
+                </Style>
+            </StackPanel.Style>
+        </StackPanel>
+        <WrapPanel Grid.Row="2">
+            <CheckBox x:Name="Case" Content="区分大小写"/>
+            <CheckBox x:Name="WholeWord" Content="全字匹配"/>
+            <CheckBox x:Name="UseRegex" Content="正则表达式"/>
+            <WrapPanel.Style>
+                <Style>
+                    <Setter Property="localfun:LayoutHelper.Margin" Value="0,0,8,0"/>
+                </Style>
+            </WrapPanel.Style>
+        </WrapPanel>
+    </Grid>
+</mah:MetroWindow>

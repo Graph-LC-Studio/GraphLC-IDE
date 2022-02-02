@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Enterwell.Clients.Wpf.Notifications/1.0.0": {
+        "runtime": {
+          "Enterwell.Clients.Wpf.Notifications.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Enterwell.Clients.Wpf.Notifications/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

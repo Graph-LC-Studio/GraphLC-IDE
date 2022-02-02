@@ -1,0 +1,41 @@
+﻿<mah:MetroWindow x:Class="GraphLC_IDE.Windows.Introduction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:GraphLC_IDE.Windows"
+        xmlns:localfun="clr-namespace:GraphLC_IDE.Functions"
+        mc:Ignorable="d"
+        Title="欢迎使用 GraphLC IDE" Height="540" Width="880" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" TitleCharacterCasing="Normal">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="/GraphLC IDE;component/Images/Introduction/useGCloud.png" Height="316"/>
+            <StackPanel VerticalAlignment="Center" Margin="40,0">
+                <TextBlock Text="通过 GCloud，"/>
+                <TextBlock Text="随时同步您的代码"/>
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontSize" Value="24"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Style>
+                </StackPanel.Resources>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft" VerticalAlignment="Center">
+            <Button Content="注册账户" Click="Reg" Width="80" Height="29" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"/>
+            <Button Content="登录" Click="Login" Width="80" BorderThickness="1" Style="{StaticResource MahApps.Styles.Button.MetroSquare}"/>
+
+            <StackPanel.Style>
+                <Style>
+                    <Setter Property="localfun:LayoutHelper.Margin" Value="4,8"/>
+                </Style>
+            </StackPanel.Style>
+        </StackPanel>
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,62 @@
+﻿<mah:MetroWindow x:Class="GraphLC_IDE.Windows.ModuleInstaller"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraphLC_IDE.Windows"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="模块管理器" Height="490" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid Margin="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <ScrollViewer x:Name="ModuleListViewer" Visibility="Collapsed" VerticalScrollBarVisibility="Auto">
+                <UniformGrid x:Name="ModuleList" Columns="2" VerticalAlignment="Top"/>
+            </ScrollViewer>
+            <Grid x:Name="InstallProgress" Margin="114,20" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="8"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <ProgressBar x:Name="Progress" Height="14" Minimum="0" Maximum="100"/>
+                    <TextBlock Grid.Column="2" x:Name="TotalInstall" TextAlignment="Center"/>
+                </Grid>
+                <TextBlock Grid.Row="1" x:Name="Description"/>
+            </Grid>
+            <mah:ProgressRing x:Name="Ring"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock FontSize="14" Foreground="Gray" TextWrapping="Wrap">
+                    <Run Text="继续操作即表示您同意GraphLC IDE的"/>
+                    <Run Foreground="SteelBlue" TextDecorations="Underline" Cursor="Hand" Text="使用许可证"/>
+                    <Run Text="。我们同时提供了通过GraphLC IDE下载其他软件(模块)的功能，这些软件单独进行许可。"/>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <TextBlock x:Name="TotalSpace" Text="共需 0B" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,0" Foreground="Gray"/>
+                <Button Content="修改" Click="Modify" Width="68" Height="26" BorderThickness="1" Style="{StaticResource MahApps.Styles.Button.Square}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="GraphLC_IDE.Controls.CompletionItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GraphLC_IDE.Controls"
+             xmlns:localfun="clr-namespace:GraphLC_IDE.Functions"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" 
+             xmlns:editor="http://icsharpcode.net/sharpdevelop/avalonedit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="CompletionNameBox" x:FieldModifier="private" mah:TextBoxHelper.Watermark="补全项名称" TextChanged="CompletionNameBoxTextChanged"/>
+        <TextBox Grid.Row="2" x:Name="CompletionDescriptionBox" x:FieldModifier="private" mah:TextBoxHelper.Watermark="补全项解释"/>
+        <TextBox Grid.Row="4" x:Name="CompletionIconPathBox" x:FieldModifier="private" mah:TextBoxHelper.Watermark="补全项图标路径 (如 ${path}\Config\Icon\Item1.png , 可为空)"/>
+        <editor:TextEditor Grid.Row="6" x:Name="CompletionContentBox" x:FieldModifier="private" mah:TextBoxHelper.Watermark="补全的代码" BorderThickness="1" BorderBrush="{StaticResource MahApps.Brushes.TextBox.Border}" Foreground="{StaticResource MahApps.Brushes.Badged.Foreground}"/>
+    </Grid>
+</UserControl>

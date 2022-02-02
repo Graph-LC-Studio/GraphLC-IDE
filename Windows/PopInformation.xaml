@@ -1,0 +1,51 @@
+﻿<Window x:Class="GraphLC_IDE.Windows.PopInformation"
+        x:Name="win"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:GraphLC_IDE"
+        xmlns:controls="clr-namespace:GraphLC_IDE.Controls"
+        mc:Ignorable="d"
+        BorderThickness="1,1,1,1"
+        BorderBrush="Gray"
+        Width="255" Height="185" AllowsTransparency="True" Topmost="True" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="None" ShowActivated="False">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <Storyboard.TargetProperty>Opacity</Storyboard.TargetProperty>
+                    <Storyboard.TargetName>win</Storyboard.TargetName>
+                    <DoubleAnimation From="0.1" To="1.0" Duration="0:0:1.3"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    
+    <Canvas x:Name="canvas">
+        <Grid x:Name="layout" Width="{Binding ElementName=canvas, Path=ActualWidth}" Height="{Binding ElementName=canvas, Path=ActualHeight}">
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <Storyboard.TargetProperty>(Canvas.Top)</Storyboard.TargetProperty>
+                            <Storyboard.TargetName>layout</Storyboard.TargetName>
+                            <DoubleAnimation From="5.0" To="0.0" Duration="0:0:0.8"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="26"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+            <controls:WindowTitle x:Name="title" TitleFontWeight="Light" TitleVerticalAlignment="Center" Closed="title_Closed"/>
+            <ScrollViewer Grid.Row="1" Width="Auto" Height="Auto" BorderBrush="Transparent" VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="content" x:FieldModifier="private" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            </ScrollViewer>
+            <ProgressBar x:Name="progress" Grid.Row="2" Maximum="100" Minimum="0"/>
+        </Grid>
+    </Canvas>
+</Window>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\Work\Program\GraphLC IDE\GraphLC IDE\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Controls\ComparePanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\CompletionItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\ModuleItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\TaskItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\About.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\CommandSetting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\CompareResult.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\GCloud\GCloud.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\GCloud\ModifyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Introduction.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\GCloud\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PluginInstaller.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PopInformation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\WindowTitle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\GCloud\RegisterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\SearchBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Settings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\ComparePanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\CompletionItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ModuleItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\TaskItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\About.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\CommandSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\CompareResult.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\GCloud\GCloud.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\GCloud\ModifyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Introduction.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\GCloud\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PluginInstaller.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PopInformation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\WindowTitle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\GCloud\RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\SearchBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Settings.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

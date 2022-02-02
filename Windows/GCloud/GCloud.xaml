@@ -1,0 +1,203 @@
+﻿<mah:MetroWindow x:Class="GraphLC_IDE.Windows.GCloud.GCloud"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:notifications="clr-namespace:Enterwell.Clients.Wpf.Notifications.Controls;assembly=Enterwell.Clients.Wpf.Notifications"
+        xmlns:local="clr-namespace:GraphLC_IDE.Windows"
+        xmlns:localfun="clr-namespace:GraphLC_IDE.Functions"
+        mc:Ignorable="d"
+        Title="GCloud" Height="560" Width="940" WindowStartupLocation="CenterOwner" TitleCharacterCasing="Normal">
+
+    <mah:MetroWindow.Flyouts>
+        <mah:FlyoutsControl>
+            <mah:Flyout x:Name="TaskFlyout" Header="任务进度" Position="Bottom">
+                <Grid Margin="16">
+                    <StackPanel x:Name="TaskPanel"/>
+                </Grid>
+            </mah:Flyout>
+            <mah:Flyout x:Name="DownloadFlyout" Header="通过 GCloud 地址下载文件" Position="Right" Width="320">
+                <Grid Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
+                        <TextBlock Text="输入文件地址" FontSize="15"/>
+                        <TextBox x:Name="FlyoutGCloudDownloadUrl" mah:TextBoxHelper.Watermark="GCloud 分享地址/文件地址" Margin="0,10"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="FlyoutGCloudDownloadPath" mah:TextBoxHelper.Watermark="保存位置"/>
+                            <Button x:Name="FlyoutGCloudDownloadChoosePath" Grid.Column="2" Content="选择" Click="FlyoutGCloudDownloadChoosePathClick"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="FlyoutGCloudDownload" Grid.Column="2" Content="下载" Click="FlyoutGCloudDownloadClick" FontSize="12" Width="74" Height="30" FontWeight="Light"/>
+                    </Grid>
+                </Grid>
+            </mah:Flyout>
+            <mah:Flyout x:Name="CopyFlyout" Header="转存共享文件" Position="Right" Width="320">
+                <Grid Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel>
+                        <TextBlock Text="输入文件地址" FontSize="15"/>
+                        <TextBox x:Name="FlyoutGCloudCopyUrl" mah:TextBoxHelper.Watermark="GCloud 分享地址/文件地址" Margin="0,10"/>
+                        <TextBox x:Name="FlyoutGCloudCopyPath" mah:TextBoxHelper.Watermark="转存位置"/>
+                    </StackPanel>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="FlyoutGCloudCopy" Grid.Column="2" Content="下载" Click="FlyoutGCloudCopyClick" FontSize="12" Width="74" Height="30" FontWeight="Light"/>
+                    </Grid>
+                </Grid>
+            </mah:Flyout>
+        </mah:FlyoutsControl>
+    </mah:MetroWindow.Flyouts>
+
+    <Grid>
+        <Grid x:Name="Gui">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Margin="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="16"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="4"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="/GraphLC IDE;component/Images/User.png"/>
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                        <TextBlock x:Name="UserName" FontSize="20"/>
+                        <TextBlock x:Name="Email" Foreground="DarkGray"/>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel Grid.Row="2">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="Margin" Value="0"/>
+                            <Setter Property="Padding" Value="0,4"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock x:Name="ButtonMyFiles" Text="我的文件" Tag="{Binding ElementName=FilesPanel}" TextAlignment="Center" MouseEnter="TabItemMouseEnter" MouseLeave="TabItemMouseLeave" MouseLeftButtonUp="TabItemClick"/>
+                    <TextBlock Text="账户" TextAlignment="Center" Tag="{Binding ElementName=AccounGrid}" MouseEnter="TabItemMouseEnter" MouseLeave="TabItemMouseLeave" MouseLeftButtonUp="TabItemClick" Background="Transparent"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Width="160" HorizontalAlignment="Left">
+                    <TextBlock x:Name="UsedSpaceInfo" Margin="0,4"/>
+                    <ProgressBar x:Name="UsedSpace" Minimum="0" Maximum="100" Value="0" Foreground="DarkCyan" MinHeight="2"/>
+                </StackPanel>
+            </Grid>
+
+            <Canvas x:Name="canvas" Grid.Column="1" Margin="4,0">
+                <Grid x:Name="FilesPanel" Width="{Binding ElementName=canvas, Path=ActualWidth}" Height="{Binding ElementName=canvas, Path=ActualHeight}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,4,4,8">
+                        <mah:DropDownButton Content="下载" Width="70">
+                            <mah:DropDownButton.Items>
+                                <MenuItem Header="共享文件" FontSize="12" Padding="0,6,12,6">
+                                    <MenuItem Header="下载到本地" Click="DownloadFileFromShareSpace" FontSize="12" Padding="0,8,0,6"/>
+                                    <MenuItem Header="转存到我的 GCloud" Click="CopyFileFromShareSpace" FontSize="12" Padding="0,6,0,8"/>
+                                </MenuItem>
+                            </mah:DropDownButton.Items>
+                        </mah:DropDownButton>
+
+                        <Button Content="上一级" Width="64" Click="GoParent" Style="{StaticResource MahApps.Styles.Button.Square}" BorderThickness="1"/>
+                        <Button Content="刷新" Width="64" Click="Refresh" Style="{StaticResource MahApps.Styles.Button.Square}" BorderThickness="1"/>
+
+                        <StackPanel.Style>
+                            <Style>
+                                <Setter Property="localfun:LayoutHelper.Margin" Value="6,3"/>
+                            </Style>
+                        </StackPanel.Style>
+                    </StackPanel>
+                    
+                    <ListView Grid.Row="1" x:Name="Files" SizeChanged="FilesSizeChanged" MouseDoubleClick="FilesMouseDoubleClick" PreviewKeyUp="Files_PreviewKeyUp" AllowDrop="True" Drop="FilesDrop" DragOver="FilesDragOver">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="True">
+                                <GridViewColumn Header="名称     " DisplayMemberBinding="{Binding Name}"/>
+                                <GridViewColumn Header="  修改日期" Width="150" DisplayMemberBinding="{Binding Date}"/>
+                                <GridViewColumn Header="  大小   " Width="80" DisplayMemberBinding="{Binding Size}"/>
+                                <GridViewColumn Header="  状态   " Width="80" DisplayMemberBinding="{Binding Shared}"/>
+                            </GridView>
+                        </ListView.View>
+
+                        <ListView.ContextMenu>
+                            <ContextMenu Opened="FileViewContextMenuOpened">
+                                <MenuItem Name="MenuMakeDir" Header="新建文件夹" Click="MenuMakeDirClick" InputGestureText="Ctrl+N"/>
+                                <MenuItem Name="MenuCopy" Header="复制" Click="MenuCopyClick"/>
+                                <MenuItem Name="MenuUpload" Header="上传" Click="MenuUploadClick"/>
+                                <MenuItem Name="MenuDownload" Header="下载" Click="MenuDownloadClick"/>
+                                <MenuItem Name="MenuMoveTo" Header="移动至" Click="MenuMoveToClick"/>
+                                <MenuItem Name="MenuRename" Header="重命名" Click="MenuRenameClick"/>
+                                <MenuItem Name="MenuShare" Header="分享" Click="MenuShareClick"/>
+                                <MenuItem Name="MenuDelete" Header="删除" Click="MenuDeleteClick" InputGestureText="Delete"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+
+                    <Button Grid.Row="2" HorizontalAlignment="Right" Margin="0,0,4,4" Style="{DynamicResource MahApps.Styles.Button.Square}" BorderThickness="0" Click="ShowTasks">
+                        <Button.Content>
+                            <WrapPanel>
+                                <Image Source="/GraphLC IDE;component/Images/Tools/GCloudTask.png" Width="8" Margin="2,0,8,0"/>
+                                <TextBlock Grid.Column="2" Text="任务进度" Grid.ColumnSpan="2"/>
+                            </WrapPanel>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+
+                <Grid x:Name="AccounGrid" Width="{Binding ElementName=canvas, Path=ActualWidth}" Height="{Binding ElementName=canvas, Path=ActualHeight}">
+                    <StackPanel Margin="4,3">
+                        <Button Content="GCloud 空间扩容" Click="LeaseSpace" Style="{StaticResource MahApps.Styles.Button.Square}" Margin="0,5" Width="114" HorizontalAlignment="Left" BorderThickness="1" mah:ControlsHelper.ContentCharacterCasing="Normal" />
+                        <Button Content="修改密码" Click="Modify" Style="{StaticResource MahApps.Styles.Button.Square}" Margin="0,5" Width="114" HorizontalAlignment="Left" BorderThickness="1"/>
+                        <Button Content="退出登录" Click="LogOut" Style="{StaticResource MahApps.Styles.Button.Square}" Margin="0,5" Width="114" HorizontalAlignment="Left" BorderThickness="1"/>
+                    </StackPanel>
+                </Grid>
+            </Canvas>
+        </Grid>
+
+        <Grid x:Name="NotificationsGrid" Visibility="Collapsed">
+            <notifications:NotificationMessageContainer Manager="{Binding NotificationsManager}" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="360"/>
+        </Grid>
+        
+        <mah:ProgressRing x:Name="Ring"/>
+    </Grid>
+</mah:MetroWindow>

@@ -10,10 +10,10 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <StartupObject>GraphLC_IDE.App</StartupObject>
     <Description>简洁、小巧、可拓展的轻量级IDE</Description>
-    <Copyright>Copyright 2019-2022 RetSoft. (内部版本 2212.5)</Copyright>
+    <Copyright>Copyright 2019-2022 Graph LC Studio. (内部版本 2212.6)</Copyright>
     <SignAssembly>False</SignAssembly>
     <Authors>Graph LC Studio</Authors>
-    <Version>5.2.0</Version>
+    <Version>5.2.1</Version>
     <Product>$(AssemblyName) 2022 Pre 2</Product>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
@@ -64,6 +64,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove=".gitignore" />
     <None Remove="Images\GCloudLogo.png" />
     <None Remove="Images\icon_w.png" />
     <None Remove="Images\icon_w_20.png" />
@@ -77,7 +78,9 @@
     <None Remove="Images\Tools\Run.png" />
     <None Remove="Images\Tools\User.png" />
     <None Remove="Images\User.png" />
+    <None Remove="LICENSE" />
     <None Remove="Loading.png" />
+    <None Remove="README.md" />
   </ItemGroup>
 
   <ItemGroup>

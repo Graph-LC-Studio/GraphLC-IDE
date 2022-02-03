@@ -118,7 +118,7 @@
 
                 <StackPanel Grid.Row="4" Width="160" HorizontalAlignment="Left">
                     <TextBlock x:Name="UsedSpaceInfo" Margin="0,4"/>
-                    <ProgressBar x:Name="UsedSpace" Minimum="0" Maximum="100" Value="0" Foreground="DarkCyan" MinHeight="2"/>
+                    <ProgressBar x:Name="UsedSpace" Minimum="0" Maximum="100" Value="0" MinHeight="2"/>
                 </StackPanel>
             </Grid>
 

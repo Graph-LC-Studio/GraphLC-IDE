@@ -25,9 +25,14 @@ namespace GraphLC_IDE.Windows.GCloud
     /// </summary>
     public partial class LoginWindow : MahApps.Metro.Controls.MetroWindow
     {
+        public NotificationMessageManager NotificationsManager { get; } = new NotificationMessageManager();
+
         public LoginWindow()
         {
+            this.DataContext = this;
             InitializeComponent();
+            this.NotificationsGrid.Visibility = Visibility.Visible;
+
             ThemeManager.Current.ChangeTheme(this, AppInfo.Theme["name"].ToString());
         }
 
@@ -70,8 +75,18 @@ namespace GraphLC_IDE.Windows.GCloud
                             this.Close();
                         }
                         else
-                            _ = Helper.MetroBox(this, result, "无法登录账户", "确定");
-    
+                            this.NotificationsManager.CreateMessage()
+                                                     .Animates(true)
+                                                     .AnimationInDuration(0.3)
+                                                     .AnimationOutDuration(0.3)
+                                                     .Accent(Brushes.Red)
+                                                     .Background("#363636")
+                                                     .HasBadge("错误")
+                                                     .HasMessage("无法登录账户")
+                                                     .Dismiss().WithButton("关闭", null)
+                                                     .Dismiss().WithDelay(TimeSpan.FromSeconds(8))
+                                                     .Queue();
+
                         Ring.Visibility = Visibility.Collapsed;
                     });
                 }
